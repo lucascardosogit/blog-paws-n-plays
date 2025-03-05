@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paws n' Play</title>
-</head>
-<body>
-    
-</body>
-</html>l
+  </head>
+  <body>
+    <main>
+        <header>
+          <nav>
+            <ul>
+              <li><p>Paws n' Play</p></li>
+              <li>Shop</li>
+              <li>Services</li>
+              <li>About Us</li>
+              <li>Blog</li>
+              <li>Contact</li>
+              <li><button>Get Started</button></li>
+            </ul>
+          </nav>
+        </header>
+        <section id="home">
+          <h1>Pawsitively Perfect: Where Every Pet's Dream Comes True!</h1>
+          <p>Welcome to Paws n’ Play, the ultimate destination for pet lovers!
+            Explore a world of tail-wagging joy and furry companionship with our
+            wide range of products and services. From pampering essentials to
+            playful toys, we're here to make every moment with your pet pawsitively
+            perfect!"</p>
+          <button>Shop Now</button>
+        </section>
+        <!-- Pedir auxílio para melhor forma de estruturar as sections "Shop", "Services" e afins - colocar uma section dentro de outra? -->
+        <section id="shop">
+            <h2>Shop</h2>
+            <section id="shop-featured-products">
+                <header>
+                    <h2>Featured Products</h2>
+                    <!-- colocar ícone de lupa na barra de pesquisa -->
+                    <input type="text"  placeholder= "Search">
+                </header>
+                <body>
+                    <ul>
+                        <li>Random</li>
+                        <li>Cat</li>
+                        <li>Dogs</li>
+                        <li>Fish</li>
+                        <li>Birds</li>
+                    </ul>
+                    <section id="product1">
+                        <!-- Qual a melhor abordagem para dividir o corpo da imagem do hover? - imagem no corpo, infos no corpo, valor no h5? -->
+                        <header>
+                            <h5>₦15,000.00</h5>
+                            <button id="liked">♡</button>
+                        </header>
+                        <body>
+                            <h5>Multivitamin For Cat</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam.</p>
+                            <img src="/img/cat-food-orange.png" alt="Orange-toned food package illustrated with a drawn orange and white cat.">
+                        </body>
+                        <footer>
+                            <button>+</button>
+                            <p>1</p>
+                            <button>-</button>
+                            <button>Add to card</button>
+                        </footer>
+                    </section>
+                    <section id="product2">
+                        <header>
+                            <h5>₦15,000.00</h5>
+                            <button id="liked">♡</button>
+                        </header>
+                        <body>
+                            <h5>Cat Food</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam.</p>
+                            <img src="/img/cat-food-white.png" alt="White cat food package with a small white cat drawn on the front, with a black heart drawn above the animal.">
+                        </body>
+                        <footer>
+                            <button>+</button>
+                            <p>1</p>
+                            <button>-</button>
+                            <button>Add to card</button>
+                        </footer>
+                    </section>
+                    <section id="product3">
+                        <header>
+                            <h5>₦15,000.00</h5>
+                            <button id="liked">♡</button>
+                        </header>
+                        <body>
+                            <h5>Dog Food</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam.</p>
+                            <img src="/img/dog-food-white.png" alt="Package of food, illustrated with a photograph of a dog and two small pots of food next to it.">
+                        </body>
+                        <footer>
+                            <button>+</button>
+                            <p>1</p>
+                            <button>-</button>
+                            <button>Add to card</button>
+                        </footer>
+                    </section>
+                </body>
+                <footer>View More>>></footer>
+            </section>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+        </section>
+    </main>
+  </body>
+</html>
