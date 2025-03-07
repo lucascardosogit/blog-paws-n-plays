@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    color: #ffffff;
+
+    li, a {
+        text-decoration: none;
+        position: relative;
+    }
+}
+
+#home {
+    background: url(/img/hero-background.png);
+    background-repeat: no-repeat;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+@media screen and (max-height < 768px) {
+    
+}
