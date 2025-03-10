@@ -3,41 +3,119 @@
     margin: 0;
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
 }
 
 nav {
+    padding-block: 18px;
+    padding-inline: 80px;
     display: flex;
     width: 100%;
-    color: black;
+    color: white;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     position: absolute;
 
     ul {
         display: flex;
         flex-wrap: wrap;
+        margin-inline-start: 0;
+        gap: 32px;
+
+        li {
+            list-style: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+
+    a {
         text-decoration: none;
-        list-style: none;
+        color: white;
+    }
+
+    p {
+        font-weight: 800;
+        justify-content: center;
+    }
+
+    p a {
+        border-radius: 50px;
+        color: black;
+        background-color: white;
+        padding: 10px 18px;
+    }
+    
+    .hamburguermenu {
+        @media (width > 768px) {
+            display: none;
+        }
+    }
+
+    .dropdacess {
+        color: white;
+        border: none;
+        background-color: transparent;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdcontent {
+        display: none;
+        position: absolute;
+        background-color: blue;
+    }
+
+    .dropdown:hover .dropdcontent {
+        display: block;
+    }
+
+    .dropdown:hover .dropdacess {
+        background-color: blue;
     }
 }
+
 
 #home {
     background: url(/img/hero-background.png);
     background-repeat: no-repeat;
-    padding-block-start: 10%;
-    float: inline-start;
-    max-width: 100%;
-    max-height: 100%;
-    background-size: 100%;
+    background-position: center;
+    height: 100vh;
+    background-size: 105%;
+}
+
+h1 {
+    color: white;
+    justify-content: center;
+    padding: 16% 50% 0 5%;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+#home {
+    #hometext {
+        color: white;
+        justify-content: center;
+        margin: 0 50% 30px 5%;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    #shopnowbutton {
+        border-radius: 50px;
+        border: 1px white solid;
+        margin: 30px 50% 0 5%;
+        padding: 16px 28px;
+        text-decoration: none;
+        color: white;
+    }
 }
 
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    flex-wrap: wrap;
-}
-
-@media screen and (max-height < 768px) {
-    
 }
