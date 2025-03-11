@@ -1,14 +1,19 @@
 * {
     padding: 0;
     margin: 0;
-    font-size: 20px;
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 nav {
-    padding-block: 18px;
-    padding-inline: 80px;
+    padding-block: 1.13rem;
+    padding-inline: 5rem;
     display: flex;
     width: 100%;
     color: white;
@@ -20,12 +25,12 @@ nav {
         display: flex;
         flex-wrap: wrap;
         margin-inline-start: 0;
-        gap: 32px;
+        gap: 2rem;
 
         li {
             list-style: none;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 1rem;
         }
     }
 
@@ -36,14 +41,13 @@ nav {
 
     p {
         font-weight: 800;
-        justify-content: center;
     }
 
     p a {
         border-radius: 50px;
         color: black;
         background-color: white;
-        padding: 10px 18px;
+        padding: 0.5rem 1.2rem;
     }
     
     .hamburguermenu {
@@ -78,24 +82,13 @@ nav {
     }
 }
 
-
 #home {
     background: url(/img/hero-background.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
     background-size: 105%;
-}
 
-h1 {
-    color: white;
-    justify-content: center;
-    padding: 16% 50% 0 5%;
-    font-size: 60px;
-    font-weight: 400;
-}
-
-#home {
     #hometext {
         color: white;
         justify-content: center;
@@ -108,14 +101,90 @@ h1 {
         border-radius: 50px;
         border: 1px white solid;
         margin: 30px 50% 0 5%;
-        padding: 16px 28px;
+        padding: 1rem 1.75rem;
         text-decoration: none;
         color: white;
     }
+
+    h1 {
+        color: white;
+        justify-content: center;
+        padding: 16% 50% 0 5%;
+        font-size: 3.75rem;
+        font-weight: 400;
+    }
 }
 
-body {
+.sectiontitle {
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    margin: 4.5rem 5rem;
+    border-block-end: 0.2px solid #000000;
+}
+
+#featuredproducts {
+    border: 0.2px solid #000000;
+    margin: 2.5rem;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    flex-wrap: wrap;
+    padding: 2.5rem 1.3rem;
+    gap: 40px;
+ 
+    header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+ 
+        h2 {
+            margin-inline-end: auto;
+        }
+
+        svg#searchicon {
+            left: 73%;
+            z-index: 1;
+            pointer-events: none;
+        }
+ 
+        input {
+            border: none;
+            border-radius: 50px;
+            background-color: #F4F4F4;
+            font-weight: 600;
+            padding: 1.6rem 8.75rem 1.6rem 2.8rem;
+        }
+    }
+
+    ul {
+        gap: 2rem;
+
+        li {
+            list-style: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "img1 img2 img3";
+        gap: 1rem;
+
+        .product {
+            grid-area: img1 img2 img3;
+            
+            header {
+                justify-content: space-around;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            img {
+                opacity: 30%;
+                height: 27rem;
+                border-radius: 10px;
+            }
+        }
+    }
 }
