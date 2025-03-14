@@ -18,7 +18,7 @@
 }
 
 .container {
-    border: 0.2px solid black;
+    border: 0.2px solid gray;
     padding: 2.5rem;
     margin: 0 7.5rem 9rem 7.5rem;
 }
@@ -356,11 +356,47 @@ nav {
     }
 }
 
-#abotus {
-    display: flexbox;
+#aboutus {
+    .container {
+        display: flex;
+        
+        div {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            
+            article {
+                color: #101828;
+                text-align: left;
+                text-size-adjust: initial;
+                font-weight: 400;
+                font-size: 1.25rem;
+                line-height: 100%;
+                
+                p {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            #browncat {
+                width: 29rem;
+                height: 35rem;
+                left: 15%;
+                position: relative;
+            }
+            
+            #orangecat {
+                width: 14rem;
+                height: 14rem;
+                left: 0;
+                top: 73%;
+                position: absolute;
+                border: 15px solid white ;
+            }
     
-    article {
-        border: 0.2px solid black;
-        color: red;
+            #browncat, #orangecat {
+                border-radius: 20px;
+            }
+        }
     }
 }
