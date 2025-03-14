@@ -11,10 +11,15 @@
 }
 
 .sectiontitle {
+    color: #101828;
     font-size: 2.2rem;
     padding: 1rem 0;
-    margin: 4.5rem 5rem;
+    margin: 4.5rem 0;
     border-block-end: 0.2px solid #000000;
+}
+
+.sectioning {
+    margin: 4.375rem 5rem;
 }
 
 .container {
@@ -381,7 +386,7 @@ nav {
             #browncat {
                 width: 29rem;
                 height: 35rem;
-                left: 15%;
+                left: 9%;
                 position: relative;
             }
             
@@ -410,7 +415,6 @@ nav {
 
         .employee {
             display: block;
-            margin-bottom: 4.375rem;
 
             img {
                 width: 17.5rem;
@@ -450,7 +454,7 @@ nav {
         div {
             width: 50%;
 
-            img {
+            video {
                 max-width: 38rem;
                 height: auto;
             }
@@ -488,5 +492,14 @@ nav {
             }
         }
         
+    }
+}
+
+#getintouch {
+    background-color: #101828;
+    margin: 4.375rem 0;
+
+    h2 {
+        color: white;
     }
 }
