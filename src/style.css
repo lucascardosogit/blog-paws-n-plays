@@ -344,7 +344,7 @@ nav {
             height: auto;
         
             &:hover {
-                border: 5px solid transparent;
+                border: 8px solid transparent;
                 border-radius: 15px;
             }
         }
@@ -438,5 +438,55 @@ nav {
                 }
             }
         }
+    }
+}
+
+#blog {
+    #blogcontainer {
+        margin: 0 5rem;
+        display: flex;
+        gap: 4rem;
+
+        div {
+            width: 50%;
+
+            img {
+                max-width: 38rem;
+                height: auto;
+            }
+        }
+        
+        h2 {
+            color: #101828;
+            font-size: 2.250rem;
+            font-weight: 600;
+            padding: 0 0 3rem 0;
+            border-bottom: 1px solid #EAECF0;
+            margin-bottom: 2rem;
+        }
+        
+        article {
+            font-weight: 300;
+            font-size: 1.125rem;
+            color: #667085;
+            
+            h3 {
+                color: #101828;
+                margin: 2rem 0 1rem 0;
+            }
+            
+            button {
+                background-image: var(--background-gradient);
+                border-image: var(--border-gradient);
+                color: white;
+                margin-top: 3rem;        
+                padding: 1.25rem 1.5rem;
+                font-size: 1.250rem;
+                font-weight: 400;
+                border: 1px solid;
+                border-radius: 8px;
+            }
+        }
+        
     }
 }
