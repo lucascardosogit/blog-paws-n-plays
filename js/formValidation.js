@@ -1,4 +1,5 @@
 const form = document.getElementById('form');
+const newsletter = document.querySelector('#contactnewsemail');
 const fields = document.querySelectorAll('.required');
 const spans = document.querySelectorAll('.spanmessage');
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -6,6 +7,11 @@ const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+")
 //Deixar o botão disable até que todos os campos do formulário estejam preenchidos corretamente
 //Adicionar evento para que apareça alguma mensagem dizendo que o formulário foi enviado com sucesso após clicar em submit
 //Adicionar tratamento no campo de email do newsletter
+
+console.log(newsletter);
+console.log(fields[2].value);
+console.log(fields);
+console.log(spans[3]);
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -60,11 +66,14 @@ function emailValidate() {
     }
 }
 
-function checkboxValidate() {
-    if(!fields[4].checked) {
-        spans[4].textContent = '* Please consider reading our privacy policy to adhere to the terms';
-        setError(4);
+function emailNewsValidate() {
+    if(!emailRegex.test(newsletter.value)){
+        spans[3].textContent = '* Please enter a valid email address, respecting the example';
+        newsletter.style.border = '2px solid #FF0000';
+        spans[3].style.display = 'block';
     } else {
-        removeError(4);
+        spans[3].textContent = '';
+        newsletter.style.border = '';
+        spans[3].style.display = 'none';
     }
 }

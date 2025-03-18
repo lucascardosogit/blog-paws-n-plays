@@ -365,72 +365,80 @@
             <form action="index.html" method="post" id="form">
             <span id="namescontainer">
               <div>
-                <label class="legend" for="firstname">First Name</label>
+                <label for="firstname">First Name</label>
                 <input type="text" id="firstname" class="required" name="firstname" placeholder="First Name" required oninput="nameValidate()" />
                 <span class="spanmessage"><small></small></span>
               </div>
               <div>
-                <label class="legend" for="lastname">Last Name</label>
+                <label for="lastname">Last Name</label>
                 <input type="text" id="lastname" class="required" name="lastname" placeholder="Last Name" required oninput="nameValidate()" />
                 <span class="spanmessage"><small></small></span>
               </div>
             </span>
-              <label class="legend" for="contactemail">Email</label>
+              <label for="contactemail">Email</label>
               <input type="email" id="contactemail" class="required" name="contactemail" placeholder="you@company.com" autocomplete="on" required oninput="emailValidate()"/>
               <span class="spanmessage"><small></small></span>
-              <label class="legend" for="message">Message</label>
+              <label for="message">Message</label>
               <textarea id="message" class="required" name="message" required></textarea>
-              <div>
+              <div id="checkboxcontainer">
                 <input type="checkbox" id="agreepolicy" class="required" name="agreepolicy" required oninput="checkboxValidate()"/>
-                <label class="legend" for="agreepolicy">You agree to our friendly <a href="#getintouch">privacy policy</a>.</label>
+                <label for="agreepolicy">You agree to our friendly<a href="#getintouch">privacy policy</a>.</label>
               </div>
               <button type="submit" class="button">Send message</button>
             </form>
           </div>
-          <div id="adresscontainer">
+          <div id="addresscontainer">
             <address>
               <dl>
-                <dt>
-                  <figure>
-                    <svg aria-hidden="true" width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 3C21 1.9 20.1 1 19 1H3C1.9 1 1 1.9 1 3M21 3V15C21 16.1 20.1 17 19 17H3C1.9 17 1 16.1 1 15V3M21 3L11 10L1 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"/>
-                    </svg>
-                    <figcaption>Email</figcaption>
-                  </figure>
-                </dt>
-                <dd>Our friendly team is here to help.</dd>
-                <dd>hello@pawsnplay.com</dd>
-                <dt>
-                  <figure>
-                    <svg aria-hidden="true" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19 10C19 17 10 23 10 23C10 23 1 17 1 10C1 7.61305 1.94821 5.32387 3.63604 3.63604C5.32387 1.94821 7.61305 1 10 1C12.3869 1 14.6761 1.94821 16.364 3.63604C18.0518 5.32387 19 7.61305 19 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <figcaption>Office</figcaption>
-                  </figure>
-                </dt>
-                <dd>Come say hello at our office HQ.</dd>
-                <dd>123, Yaya Abatan st, Ogba Lagos.</dd>
-                <dt>
-                  <figure>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <figcaption>Live Chat</figcaption>
-                  </figure>
-                </dt>
-                <dd>Our friendly team is here to help.</dd>
-                <dd><a href="#getintouch">Start new chat</a></dd>
-                <dt>
-                  <figure>
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.9999 15.9201V18.9201C21.0011 19.1986 20.944 19.4743 20.8324 19.7294C20.7209 19.9846 20.5572 20.2137 20.352 20.402C20.1468 20.5902 19.9045 20.7336 19.6407 20.8228C19.3769 20.912 19.0973 20.9452 18.8199 20.9201C15.7428 20.5857 12.7869 19.5342 10.1899 17.8501C7.77376 16.3148 5.72527 14.2663 4.18993 11.8501C2.49991 9.2413 1.44818 6.27109 1.11993 3.1801C1.09494 2.90356 1.12781 2.62486 1.21643 2.36172C1.30506 2.09859 1.4475 1.85679 1.6347 1.65172C1.82189 1.44665 2.04974 1.28281 2.30372 1.17062C2.55771 1.05843 2.83227 1.00036 3.10993 1.0001H6.10993C6.59524 0.995321 7.06572 1.16718 7.43369 1.48363C7.80166 1.80008 8.04201 2.23954 8.10993 2.7201C8.23656 3.68016 8.47138 4.62282 8.80993 5.5301C8.94448 5.88802 8.9736 6.27701 8.89384 6.65098C8.81408 7.02494 8.6288 7.36821 8.35993 7.6401L7.08993 8.9101C8.51349 11.4136 10.5864 13.4865 13.0899 14.9101L14.3599 13.6401C14.6318 13.3712 14.9751 13.1859 15.3491 13.1062C15.723 13.0264 16.112 13.0556 16.4699 13.1901C17.3772 13.5286 18.3199 13.7635 19.2799 13.8901C19.7657 13.9586 20.2093 14.2033 20.5265 14.5776C20.8436 14.9519 21.0121 15.4297 20.9999 15.9201Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <figcaption>Phone</figcaption>
-                  </figure>
-                </dt>
-                <dd>Mon-Fri from 8am to 5pm.</dd>
-                <dd>+234 901234 384</dd>
+                <span>
+                  <dt>
+                    <figure>
+                      <svg aria-hidden="true" width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 3C21 1.9 20.1 1 19 1H3C1.9 1 1 1.9 1 3M21 3V15C21 16.1 20.1 17 19 17H3C1.9 17 1 16.1 1 15V3M21 3L11 10L1 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"/>
+                      </svg>
+                      <figcaption>Email</figcaption>
+                    </figure>
+                  </dt>
+                  <dd>Our friendly team is here to help.</dd>
+                  <dd>hello@pawsnplay.com</dd>
+                </span>
+                <span>
+                  <dt>
+                    <figure>
+                      <svg aria-hidden="true" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 10C19 17 10 23 10 23C10 23 1 17 1 10C1 7.61305 1.94821 5.32387 3.63604 3.63604C5.32387 1.94821 7.61305 1 10 1C12.3869 1 14.6761 1.94821 16.364 3.63604C18.0518 5.32387 19 7.61305 19 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <figcaption>Office</figcaption>
+                    </figure>
+                  </dt>
+                  <dd>Come say hello at our office HQ.</dd>
+                  <dd>123, Yaya Abatan st, Ogba Lagos.</dd>
+                </span>
+                <span>
+                  <dt>
+                    <figure>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <figcaption>Live Chat</figcaption>
+                    </figure>
+                  </dt>
+                  <dd>Our friendly team is here to help.</dd>
+                  <dd><a href="#getintouch">Start new chat</a></dd>
+                </span>
+                <span>
+                  <dt>
+                    <figure>
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.9999 15.9201V18.9201C21.0011 19.1986 20.944 19.4743 20.8324 19.7294C20.7209 19.9846 20.5572 20.2137 20.352 20.402C20.1468 20.5902 19.9045 20.7336 19.6407 20.8228C19.3769 20.912 19.0973 20.9452 18.8199 20.9201C15.7428 20.5857 12.7869 19.5342 10.1899 17.8501C7.77376 16.3148 5.72527 14.2663 4.18993 11.8501C2.49991 9.2413 1.44818 6.27109 1.11993 3.1801C1.09494 2.90356 1.12781 2.62486 1.21643 2.36172C1.30506 2.09859 1.4475 1.85679 1.6347 1.65172C1.82189 1.44665 2.04974 1.28281 2.30372 1.17062C2.55771 1.05843 2.83227 1.00036 3.10993 1.0001H6.10993C6.59524 0.995321 7.06572 1.16718 7.43369 1.48363C7.80166 1.80008 8.04201 2.23954 8.10993 2.7201C8.23656 3.68016 8.47138 4.62282 8.80993 5.5301C8.94448 5.88802 8.9736 6.27701 8.89384 6.65098C8.81408 7.02494 8.6288 7.36821 8.35993 7.6401L7.08993 8.9101C8.51349 11.4136 10.5864 13.4865 13.0899 14.9101L14.3599 13.6401C14.6318 13.3712 14.9751 13.1859 15.3491 13.1062C15.723 13.0264 16.112 13.0556 16.4699 13.1901C17.3772 13.5286 18.3199 13.7635 19.2799 13.8901C19.7657 13.9586 20.2093 14.2033 20.5265 14.5776C20.8436 14.9519 21.0121 15.4297 20.9999 15.9201Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <figcaption>Phone</figcaption>
+                    </figure>
+                  </dt>
+                  <dd>Mon-Fri from 8am to 5pm.</dd>
+                  <dd>+234 901234 384</dd>
+                </span>
               </dl>
             </address>
           </div>
@@ -443,9 +451,11 @@
         </div>
         <div>
           <form action="index.html" method="post" id="formnewsletter">
-            <input type="email" id="contactemail" class="required" name="contactemail" placeholder="Enter your email" autocomplete="on" required oninput="emailValidate()"/>
+            <div id="fieldsnewsletter">
+              <input type="email" id="contactnewsemail" class="required" name="contactnewsemail" placeholder="Enter your email" autocomplete="on" required oninput="emailNewsValidate()"/>
+              <button type="submit">Subscribe</button>
+            </div>
             <span class="spanmessage"><small></small></span>
-            <button type="submit">Subscribe</button>
           </form>
         </div>
       </section>
