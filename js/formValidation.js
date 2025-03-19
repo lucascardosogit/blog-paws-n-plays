@@ -1,22 +1,23 @@
 const form = document.getElementById('form');
-const newsletter = document.querySelector('#contactnewsemail');
 const fields = document.querySelectorAll('.required');
 const spans = document.querySelectorAll('.spanmessage');
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-//Deixar o botão disable até que todos os campos do formulário estejam preenchidos corretamente
-//Adicionar evento para que apareça alguma mensagem dizendo que o formulário foi enviado com sucesso após clicar em submit
-//Adicionar tratamento no campo de email do newsletter
+const formnewsletter = document.getElementById('formnewsletter')
+const newsletter = document.querySelector('#contactnewsemail');
 
-console.log(newsletter);
-console.log(fields[2].value);
-console.log(fields);
-console.log(spans[3]);
+//Tratar interação entre categorias, trocando as imagens dos produtos de acordo o li com selectedcategory
+
+formnewsletter.addEventListener('submit', (event) => {
+    event.preventDefault();
+    emailNewsValidate();
+});
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     nameValidate();
     emailValidate();
+    checkboxValidate();
 });
 
 function setError(index) {
@@ -66,14 +67,26 @@ function emailValidate() {
     }
 }
 
-function emailNewsValidate() {
-    if(!emailRegex.test(newsletter.value)){
-        spans[3].textContent = '* Please enter a valid email address, respecting the example';
-        newsletter.style.border = '2px solid #FF0000';
-        spans[3].style.display = 'block';
+function checkboxValidate() {
+    const checkedCheckBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+    if(checkedCheckBoxes.length == 0) {
+        spans[3].textContent = '* Please consider reading our privacy policy';
+        spans[3].style.display = 'flex';    
     } else {
         spans[3].textContent = '';
-        newsletter.style.border = '';
         spans[3].style.display = 'none';
+    }
+}
+
+function emailNewsValidate() {
+    if(!emailRegex.test(newsletter.value)){
+        spans[4].textContent = '* Please enter a valid email address, respecting the example';
+        newsletter.style.border = '2px solid #FF0000';
+        spans[4].style.display = 'block';
+    } else {
+        spans[4].textContent = '';
+        newsletter.style.border = '';
+        spans[4].style.display = 'none';
     }
 }
