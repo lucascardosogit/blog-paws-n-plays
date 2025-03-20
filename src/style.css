@@ -30,17 +30,16 @@
 }
 
 .button {
-        display: inline-block;
-        text-decoration: none;
-        padding: 1.25rem 1.5rem;
-        font-size: 1.250rem;
-        font-weight: 400;
-        border: 1px solid;
-        border-radius: 8px;
-        background-image: var(--background-gradient);
-        border-image: var(--border-gradient);
-        color: white;
-        margin-top: 3rem;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.250rem;
+    font-weight: 400;
+    border: 1px solid;
+    border-radius: 8px;
+    background-image: var(--background-gradient);
+    border-image: var(--border-gradient);
+    color: white;
 }
 
 body {
@@ -194,7 +193,7 @@ nav {
         }
 
         svg#searchicon {
-            left: 75.5%;
+            left: 78%;
             z-index: 1;
             pointer-events: none;
             position: absolute;
@@ -234,10 +233,7 @@ nav {
                 border-image: var(--border-gradient);
                 border-radius: 8px;
                 padding: 1rem 1.5rem;
-            
-                a {
-                    color: white;
-                }
+                color: white;
             }
 
             &:hover {
@@ -337,6 +333,11 @@ nav {
                             background-color: transparent;
                             border: transparent;
                             color: white;
+                        }
+
+                        button {
+                            padding: 0;
+                            font-size: 1.250rem;
                         }
                     }
                 }
@@ -567,6 +568,10 @@ nav {
                 color: #101828;
                 margin: 2rem 0 1rem 0;
             }
+
+            p {
+                margin-bottom: 3rem;
+            }
         }
     }
 }
@@ -665,6 +670,7 @@ nav {
                 }
 
                 button {
+                    margin-top: 3rem;
                     width: 100%;
                 }
             }

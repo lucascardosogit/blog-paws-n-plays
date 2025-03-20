@@ -22,7 +22,7 @@ minusButtons.forEach(button => {
 
 addToCards.forEach(button => {
     button.addEventListener('click', () => {
-        button.style.fontSize = '0.5rem';
+        button.style.fontSize = '1.4rem';
         setTimeout(() => button.style.fontSize = '', 100);
     });
 });
